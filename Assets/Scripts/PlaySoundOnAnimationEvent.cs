@@ -5,9 +5,11 @@ using UnityEngine.Audio;
 
 public class PlaySoundOnAnimationEvent : MonoBehaviour
 {
-    [SerializeField] private AudioClip[] audioClips;
+    [SerializeField] private AudioClip leftFootstep;
+    [SerializeField] private AudioClip rightFootstep;
 
     private AudioSource audioSource;
+    private bool isLeftFootstep;
 
 
     void Start()
@@ -17,8 +19,17 @@ public class PlaySoundOnAnimationEvent : MonoBehaviour
 
     public void PlaySound()
     {
-        int random = Random.Range(0, audioClips.Length);
+        if (isLeftFootstep)
+        {
+            audioSource.PlayOneShot(leftFootstep);
 
-        audioSource.PlayOneShot(audioClips[random]);
+            isLeftFootstep = false;
+        }
+        else
+        {
+            audioSource.PlayOneShot(rightFootstep);
+
+            isLeftFootstep = true;
+        }
     }
 }

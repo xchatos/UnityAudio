@@ -552,8 +552,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f351a739c60fd9347ac2debced3da3d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioClips:
-  - {fileID: 8300000, guid: 32e8190f8dd3dfe48a9b1dda0164e256, type: 3}
-  - {fileID: 8300000, guid: 70c63b5fe9c4a004e9a713e94c4cfc9b, type: 3}
-  - {fileID: 8300000, guid: 0b8d500d63f6ab44ba4e5767a0846d04, type: 3}
-  - {fileID: 8300000, guid: 3f6f61321e5b07e49b067e1b99ee4165, type: 3}
+  leftFootstep: {fileID: 8300000, guid: 32e8190f8dd3dfe48a9b1dda0164e256, type: 3}
+  rightFootstep: {fileID: 8300000, guid: 3f6f61321e5b07e49b067e1b99ee4165, type: 3}
