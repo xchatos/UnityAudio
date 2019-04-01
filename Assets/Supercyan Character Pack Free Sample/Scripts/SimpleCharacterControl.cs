@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 public class SimpleCharacterControl : MonoBehaviour {
 
+    #region Variables
     private enum ControlMode
     {
         Tank,
@@ -33,6 +34,13 @@ public class SimpleCharacterControl : MonoBehaviour {
 
     private bool m_isGrounded;
     private List<Collider> m_collisions = new List<Collider>();
+
+    #endregion
+
+
+    public AudioSource SfxSource;
+    public AudioClip Land;
+    public AudioClip Jump;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -182,6 +190,8 @@ public class SimpleCharacterControl : MonoBehaviour {
         if (!m_wasGrounded && m_isGrounded)
         {
             m_animator.SetTrigger("Land");
+            
+            SfxSource.PlayOneShot(Land, 0.5F);
         }
 
         if (!m_isGrounded && m_wasGrounded)
@@ -189,4 +199,8 @@ public class SimpleCharacterControl : MonoBehaviour {
             m_animator.SetTrigger("Jump");
         }
     }
+
+
+    
+
 }
