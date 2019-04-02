@@ -191,7 +191,7 @@ public class SimpleCharacterControl : MonoBehaviour {
         {
             m_animator.SetTrigger("Land");
             
-            SfxSource.PlayOneShot(Land, 0.5F);
+            SfxSource.PlayOneShot(Land);
         }
 
         if (!m_isGrounded && m_wasGrounded)
