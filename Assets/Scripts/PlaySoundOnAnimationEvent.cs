@@ -5,12 +5,13 @@ using UnityEngine.Audio;
 
 public class PlaySoundOnAnimationEvent : MonoBehaviour
 {
-    [SerializeField] private AudioClip leftFootstep;
-    [SerializeField] private AudioClip rightFootstep;
-
+    #region Private Variables
     private AudioSource audioSource;
     private bool isLeftFootstep;
+    #endregion
 
+    [SerializeField] private AudioClip leftFootstep;
+    [SerializeField] private AudioClip rightFootstep;
 
     void Start()
     {
