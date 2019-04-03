@@ -388,6 +388,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMethods: 0
   audioClip: {fileID: 8300000, guid: 72516d9aa1dd17741b6463b96e2d78d0, type: 3}
+  clipPosition: {x: 0, y: 0, z: 0}
 --- !u!4 &847963104
 Transform:
   m_ObjectHideFlags: 0

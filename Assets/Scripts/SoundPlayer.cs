@@ -15,6 +15,7 @@ public class SoundPlayer : MonoBehaviour
 
     [SerializeField] private AudioMethods audioMethods;
     [SerializeField] AudioClip audioClip;
+    [SerializeField] Vector3 clipPosition;
 
     void Start()
     {
@@ -121,7 +122,7 @@ public class SoundPlayer : MonoBehaviour
 
     public void PlayClipAtPoint()
     {
-        AudioSource.PlayClipAtPoint(audioClip, new Vector3(5, 1, 2));
+        AudioSource.PlayClipAtPoint(audioClip, clipPosition);
         playClipAtPointDone = true;
     }
 
