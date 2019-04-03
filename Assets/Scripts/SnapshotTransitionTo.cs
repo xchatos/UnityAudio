@@ -8,6 +8,7 @@ public class SnapshotTransitionTo : MonoBehaviour
     public AudioMixer main;
     public AudioMixerSnapshot[] Snapshots;
     public float[] weights;
+    public float transitionTime;
     private float[] setWeights;
 
     private void Start()
@@ -18,13 +19,13 @@ public class SnapshotTransitionTo : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         weights.CopyTo(setWeights, 0);
-        main.TransitionToSnapshots(Snapshots,setWeights,0.25f);
+        main.TransitionToSnapshots(Snapshots,setWeights, transitionTime);
     }
 
     private void OnTriggerExit(Collider other)
     { 
         setWeights[0] = 1;
         setWeights[1] = 0;
-        main.TransitionToSnapshots(Snapshots,setWeights,0.25f);
+        main.TransitionToSnapshots(Snapshots,setWeights, transitionTime);
     }
 }
